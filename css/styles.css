@@ -2,16 +2,43 @@
   box-sizing: border-box;
 }
 
+/* #f35333
+     #e4dad3 
+     #423204 
+     #756c52 
+     #a4a294 
+     #f47c6a
+     #f49080 
+     #ec3c0e 
+  
+  
+  */
+
+:root {
+  --main-bg-color: #e4dad3;
+  --main-font-color: #fff;
+  --nav-bg-color: #a4a294;
+  --titles: #423204;
+  --link: #ec3c0e;
+  --link-hover: #f35333;
+  --link-visited: #f47c6a;
+}
+
 html {
   font-size: 10px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: var(--titles);
+}
+
 body {
   font-size: 1.6rem;
-  min-width: 290px;
   position: relative;
-  display: grid;
-  grid-template-columns: 1px 3fr;
+  width: 100%;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -24,7 +51,6 @@ body {
   width: 300px;
   height: 100%;
   border-right: solid;
-  border-color: rgba(0, 22, 22, 0.4);
 }
 
 header {
@@ -35,10 +61,83 @@ header {
   font-weight: thin;
 }
 
-/*main doc*/
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*main-doc*/
 #main-doc {
   position: absolute;
   margin-left: 310px;
   padding: 20px;
   margin-bottom: 110px;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+section article {
+  margin: 15px;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+/* terminal */
+
+.example {
+  display: flex;
+  flex-direction: column;
+}
+
+.shell {
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+  background-color: greenyellow;
+}
+
+.shell_user {
+  background-color: blue;
+  margin-right: 10px;
+  border-right: 1px solid;
+}
+
+.language_shell {
+  background-color: red;
+  width: 100%;
+  overflow-x: scroll;
+  text-align: left;
+}
+
+.console_shell {
+  background-color: #423204;
+  height: 100%;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: nowrap;
+}
+
+.white_space {
+  white-space: pre;
 }

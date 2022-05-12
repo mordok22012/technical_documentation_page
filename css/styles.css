@@ -38,7 +38,7 @@ h4 {
 body {
   font-size: 1.6rem;
   position: relative;
-  width: 100%;
+
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -53,58 +53,61 @@ body {
   border-right: solid;
 }
 
-header {
-  color: black;
-  margin: 10px;
-  text-align: center;
-
-  font-weight: thin;
-}
-
-#navbar ul {
-  height: 88%;
-  padding: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-#navbar li {
-  border-top: 1px solid;
-  list-style: none;
-  position: relative;
-  width: 100%;
-}
-
-#navbar a {
-  display: block;
-  padding: 10px 30px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /*main-doc*/
 #main-doc {
   position: absolute;
   margin-left: 310px;
-  padding: 20px;
-  margin-bottom: 110px;
+  margin-right: 20px;
 }
 
-#main-doc header {
+.example {
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: yellow;
+  padding-left: 12px;
+}
+
+.shell_user {
+  font-size: 1.4rem;
+  background-color: cadetblue;
+  padding: 0 8px 0 8px;
+  border-right: 1px solid;
+}
+
+.language_shell {
+  background-color: #87dea8;
   text-align: left;
-  margin: 0px;
+  overflow-x: auto;
+  text-align: left;
+  padding: 0 8px 8px 8px;
 }
 
-section article {
-  margin: 15px;
+.console_shell {
+  position: relative;
+
+  background-color: #f47c6a;
+  width: 100%;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: nowrap;
 }
 
-section li {
-  margin: 15px 0px 0px 20px;
+.tag_pre {
 }
 
+.white_space {
+  white-space: pre;
+}
 /* terminal */
-
+/*
 .example {
   display: flex;
   flex-direction: column;
@@ -114,6 +117,7 @@ section li {
   display: flex;
   flex-direction: row;
   min-height: 100px;
+  width: 100%;
   background-color: greenyellow;
 }
 
@@ -125,19 +129,20 @@ section li {
 
 .language_shell {
   background-color: red;
-  width: 100%;
+
   overflow-x: scroll;
   text-align: left;
 }
 
 .console_shell {
   background-color: #423204;
-  height: 100%;
+
   word-wrap: normal;
   word-break: normal;
-  white-space: nowrap;
+  line-height: 2;
 }
 
 .white_space {
-  white-space: pre;
 }
+
+*/

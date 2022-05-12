@@ -228,6 +228,7 @@
             <h4>example</h4>
 
             <div class="shell">
+              
               <code class="shell_user">[user@localhost]$</code>
 
               <div class="language_shell">
@@ -242,7 +243,9 @@
                   nothing added to commit but untracked files present (use "git
                   add" to track)
                 </code>
-              </>
+              </div>
+            </div>
+          
             </div>
           </div>
 
@@ -423,6 +426,7 @@
                 <code class="console_shell">
                   <span class="text_green">git</span> status --short <br />
                   M index.html
+                </code>
               </div>
             </div>
           </div>
@@ -548,58 +552,57 @@
 
             <div class="shell">
               <code class="shell_user">[user@localhost]$</code>
-
-              <pre class="language_shell">
-                <code class="console_shell white_space">
-                  <span class="text_green">git</span> commit -help usage:
-                  git commit [] [--] ...
-                    -q, --quiet           suppress summary after successful Commit
+              <pre class="language_shell tag_pre">
+                 <code class="console_shell white_space">
+                  <span class="text_green">git</span> commit -help
+                  usage: git commit [&lt;options&gt;] [--] &lt;pathspec&gt;...
+                                    -q, --quiet           suppress summary after successful commit
+                      -v, --verbose         show diff in commit message template
 
                   Commit message options
-                    -F, --file      read message from file
-                    --author      override author for commit
-                    --date          override date for commit
-                    -m, --message 
-                                          commit message
-                    -c, --reedit-message
-                                          reuse and edit message from specified commit
-                    -C, --reuse-message
-                                          reuse message from specified commit
-                    --fixup       use autosquash formatted message to fixup specified commit
-                    --squash      use autosquash formatted message to squash specified commit
-                    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
-                    -s, --signoff         add a Signed-off-by trailer
-                    -t, --template
-                                          use specified template file
-                    -e, --edit            force edit of commit
-                    --cleanup       how to strip spaces and #comments from message
-                    --status              include status in commit message template
-                    -S, --gpg-sign[=]
-                                           GPG sign commit
-                                          
+                      -F, --file &lt;file&gt;     read message from file
+                      --author &lt;author&gt;     override author for commit
+                      --date &lt;date&gt;         override date for commit
+                      -m, --message &lt;message&gt;
+                                            commit message
+                      -c, --reedit-message &lt;commit&gt;
+                                            reuse and edit message from specified commit
+                      -C, --reuse-message &lt;commit&gt;
+                                            reuse message from specified commit
+                      --fixup &lt;commit&gt;      use autosquash formatted message to fixup specified commit
+                      --squash &lt;commit&gt;     use autosquash formatted message to squash specified commit
+                      --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+                      -s, --signoff         add a Signed-off-by trailer
+                      -t, --template &lt;file&gt;
+                                            use specified template file
+                      -e, --edit            force edit of commit
+                      --cleanup &lt;mode&gt;      how to strip spaces and #comments from message
+                      --status              include status in commit message template
+                      -S, --gpg-sign[=&lt;key-id&gt;]
+                                            GPG sign commit
+
                   Commit contents options
-                    -a, --all             commit all changed files
-                    -i, --include         add specified files to index for commit
-                    --interactive         interactively add files
-                    -p, --patch           interactively add changes
-                    -o, --only            commit only specified files
-                    -n, --no-verify       bypass pre-commit and commit-msg hooks
-                    --dry-run             show what would be committed
-                    --short               show status concisely
-                    --branch              show branch information
-                    --ahead-behind        compute full ahead/behind values
-                    --porcelain           machine-readable output
-                    --long                show status in long format (default)
-                    -z, --null            terminate entries with NUL
-                    --amend               amend previous commit
-                    --no-post-rewrite     bypass post-rewrite hook
-                    -u, --untracked-files[=]
-                                          show untracked files, optional modes: all, normal, no. (Default: all)
-                    --pathspec-from-file 
-                                          read pathspec from file
-                    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
-                                          
-                </code>
+                      -a, --all             commit all changed files
+                      -i, --include         add specified files to index for commit
+                      --interactive         interactively add files
+                      -p, --patch           interactively add changes
+                      -o, --only            commit only specified files
+                      -n, --no-verify       bypass pre-commit and commit-msg hooks
+                      --dry-run             show what would be committed
+                      --short               show status concisely
+                      --branch              show branch information
+                      --ahead-behind        compute full ahead/behind values
+                      --porcelain           machine-readable output
+                      --long                show status in long format (default)
+                      -z, --null            terminate entries with NUL
+                      --amend               amend previous commit
+                      --no-post-rewrite     bypass post-rewrite hook
+                      -u, --untracked-files[=&lt;mode&gt;]
+                                            show untracked files, optional modes: all, normal, no. (Default: all)
+                      --pathspec-from-file &lt;file&gt;
+                                            read pathspec from file
+                      --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+                 </code>
               </pre>
             </div>
           </div>
@@ -936,10 +939,7 @@
             </div>
           </div>
 
-          <p>
-            Now we created a new <span class="text_red">branch</span> called
-            "hello-world"
-          </p>
+          
           <p>
             Let's confirm that we have created a new
             <span class="text_red">branch</span>:
@@ -953,7 +953,7 @@
 
               <div class="language_shell">
                 <code class="console_shell">
-                  <span class="text_green">git</span> branch 
+                  <span class="text_green">git</span> branch <br>
                       hello-world <br>
                     * master
                 </code>
@@ -1041,6 +1041,7 @@
             <h4>example</h4>
 
             <div class="shell">
+
               <code class="shell_user">[user@localhost]$</code>
 
               <div class="language_shell">
@@ -1051,8 +1052,10 @@
                   1 files changed, 1 insertion(+) <br>
                   create mode 100644  Second line of code!
                 </code>
-              </d>
+              </div>
+
             </div>
+            
           </div>
 
           <p>Once we've done that, we need to switch to the master branch:</p>

@@ -19,9 +19,9 @@
   --main-font-color: #fff;
   --nav-bg-color: #a4a294;
   --titles: #423204;
+  --span-section: #261d02;
   --link: #ec3c0e;
   --link-hover: #f35333;
-  --link-visited: #f47c6a;
 }
 
 html {
@@ -35,10 +35,16 @@ h4 {
   color: var(--titles);
 }
 
+.text_green {
+  color: var(--span-section);
+}
+
+.text_red {
+  color: var(--link);
+}
+
 body {
   font-size: 1.6rem;
-  position: relative;
-
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -50,7 +56,41 @@ body {
   left: 0px;
   width: 300px;
   height: 100%;
+  background-color: var(--nav-bg-color);
   border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  margin: 10px;
+  text-align: center;
+  font-weight: thin;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: var(--link);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  color: var(--link-hover);
 }
 
 /*main-doc*/
@@ -60,8 +100,49 @@ body {
   margin-right: 20px;
 }
 
+#main-doc header {
+  text-align: left;
+  margin: 0;
+}
+
+section article {
+  margin: 15px;
+}
+
+section a {
+  color: var(--link);
+}
+
+section li {
+  color: var(--link);
+  margin: 15px 0px 0px 20px;
+}
+
+section li span {
+  color: black;
+}
+
+.note,
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: var(--main-bg-color);
+  min-height: 100px;
+  padding-left: 34px;
+  padding-right: 28px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.warning {
+  margin-bottom: 20px;
+}
+
+/* terminal */
 .example {
-  background-color: blueviolet;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
   padding: 14px;
@@ -71,19 +152,22 @@ body {
 .shell {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-color: yellow;
+  background-color: var(--link-hover);
   padding-left: 12px;
 }
 
 .shell_user {
   font-size: 1.4rem;
-  background-color: cadetblue;
+  background-color: #fff;
+  color: black;
   padding: 0 8px 0 8px;
+
   border-right: 1px solid;
 }
 
 .language_shell {
-  background-color: #87dea8;
+  background-color: #fff;
+  color: black;
   text-align: left;
   overflow-x: auto;
   text-align: left;
@@ -93,56 +177,59 @@ body {
 .console_shell {
   position: relative;
 
-  background-color: #f47c6a;
   width: 100%;
   word-break: normal;
   word-wrap: normal;
   white-space: nowrap;
 }
 
-.tag_pre {
+/* media queries */
+@media only screen and (max-width: 815px) {
+  #navbar ul {
+    border: 1px solid;
+
+    max-height: 180px;
+  }
+  #navbar ul li:first-child {
+    border-top: none;
+  }
+
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 272px;
+
+    z-index: 1;
+    border: none;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 340px;
+  }
 }
 
-.white_space {
-  white-space: pre;
-}
-/* terminal */
-/*
-.example {
-  display: flex;
-  flex-direction: column;
-}
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-right: 0;
+  }
 
-.shell {
-  display: flex;
-  flex-direction: row;
-  min-height: 100px;
-  width: 100%;
-  background-color: greenyellow;
+  .shell {
+    grid-template-columns: 1fr;
+    padding-left: 8px;
+  }
+
+  .shell_user {
+    display: none;
+  }
 }
 
-.shell_user {
-  background-color: blue;
-  margin-right: 10px;
-  border-right: 1px solid;
+@media only screen and (max-width: 314px) {
+  #navbar {
+    height: 318px;
+  }
 }
-
-.language_shell {
-  background-color: red;
-
-  overflow-x: scroll;
-  text-align: left;
-}
-
-.console_shell {
-  background-color: #423204;
-
-  word-wrap: normal;
-  word-break: normal;
-  line-height: 2;
-}
-
-.white_space {
-}
-
-*/

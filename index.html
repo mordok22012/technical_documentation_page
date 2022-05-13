@@ -48,25 +48,35 @@
         <article>
           <h3>What is Git?</h3>
 
-          <p>Git is a popular version control system. It was</p>
+          <p>Git is a popular version control system. It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then.</p>
           <p>It is used for:</p>
           <ul>
-            <li>Tracking code changes</li>
-            <li>Tracking who made changes</li>
-            <li>Coding collaboration</li>
+            <li><span>Tracking code changes</span></li>
+            <li><span>Tracking who made changes</span></li>
+            <li><span>Coding collaboration</span></li>
           </ul>
           <h3>What does Git do?</h3>
 
           <ul>
-            <li>Manage projects with Repositories</li>
-            <li>Clone a project to work on a local copy</li>
-            <li>Control and track changes with Staging and Committing</li>
             <li>
-              Branch and Merge to allow for work on different parts and versions
-              of a project
+              <span>Manage projects with Repositories</span>
             </li>
-            <li>Pull the latest version of the project to a local copy</li>
-            <li>Push local updates to the main project</li>
+            <li>
+              <span>Clone a project to work on a local copy</span>
+            </li>
+            <li>
+              <span>Control and track changes with Staging and Committing</span>
+            </li>
+            <li>
+              <span>Branch and Merge to allow for work on different parts and versions
+              of a project</span>
+            </li>
+            <li>
+              <span>Pull the latest version of the project to a local copy</span>
+            </li>
+            <li>
+              <span>Push local updates to the main project</span>
+            </li>
           </ul>
         </article>
       </section>
@@ -233,7 +243,7 @@
 
               <div class="language_shell">
                 <code class="console_shell">
-                  <span class="text_green">git</span>status <br>
+                  <span class="text_green">git</span> status <br>
                   On branch master <br>
                   No commits yet <br>
                   Untracked files: <br>
@@ -258,12 +268,14 @@
 
           <ul>
             <li>
-              Tracked - files that Git knows about and are added to the
+              <span>
+                Tracked - files that Git knows about and are added to the
               repository
+              </span>
             </li>
             <li>
-              Untracked - files that are in your working directory, but not
-              added to the repository
+              <span>Untracked - files that are in your working directory, but not
+              added to the repository</span>
             </li>
           </ul>
 
@@ -272,7 +284,7 @@
             untracked. To get Git to track them, you need to stage them, or add
             them to the staging environment.
           </p>
-          <p>e will cover the staging environment in the next chapter.</p>
+          <p>We will cover the staging environment in the next chapter.</p>
         </article>
       </section>
       <hr />
@@ -435,10 +447,18 @@
             <p><strong>Note:</strong> Short status flags are:</p>
 
             <ul>
-              <li>?? - Untracked files</li>
-              <li>A - Files added to stage</li>
-              <li>M - Modified files</li>
-              <li>D - Deleted files</li>
+              <li>
+                <span>?? - Untracked files</span>
+              </li>
+              <li>
+                <span>A - Files added to stage</span>
+              </li>
+              <li>
+                <span>M - Modified files</span>
+              </li>
+              <li>
+                <span>D - Deleted files</span>
+              </li>
             </ul>
           </div>
 
@@ -494,7 +514,7 @@
               <div class="language_shell">
                 <code class="console_shell">
                   <span class="text_green">git</span> log <br>
-                  >commit 09f4acd3f8836b7f6fc44ad9e012f82faf861803 (HEAD ->
+                  commit 09f4acd3f8836b7f6fc44ad9e012f82faf861803 (HEAD ->
                   master) <br>
                   Author: w3schools-test <br>
                   Date: Fri Mar 26 09:35:54 2021 +0100 <br>
@@ -527,13 +547,17 @@
 
           <ul>
             <li>
-              <span class="text_red">git command -help</span> - See all the
+              <span> 
+                <span class="text_red">git command -help</span> - See all the
               available options for the specific command
+            </span>
             </li>
 
             <li>
-              <span class="text_red">git help --all</span> - See all possible
+              <span>
+                <span class="text_red">git help --all</span> - See all possible
               commands
+              </span>
             </li>
           </ul>
 
@@ -552,58 +576,60 @@
 
             <div class="shell">
               <code class="shell_user">[user@localhost]$</code>
-              <pre class="language_shell tag_pre">
-                 <code class="console_shell white_space">
-                  <span class="text_green">git</span> commit -help
-                  usage: git commit [&lt;options&gt;] [--] &lt;pathspec&gt;...
-                                    -q, --quiet           suppress summary after successful commit
-                      -v, --verbose         show diff in commit message template
+              <div class="language_shell">
+                 <code class="console_shell normal">
+                  <span class="text_green">git</span> commit -help <br>
+                  usage: git commit [] [--] ... <br> 
+                 <pre>
+     -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
 
-                  Commit message options
-                      -F, --file &lt;file&gt;     read message from file
-                      --author &lt;author&gt;     override author for commit
-                      --date &lt;date&gt;         override date for commit
-                      -m, --message &lt;message&gt;
-                                            commit message
-                      -c, --reedit-message &lt;commit&gt;
-                                            reuse and edit message from specified commit
-                      -C, --reuse-message &lt;commit&gt;
-                                            reuse message from specified commit
-                      --fixup &lt;commit&gt;      use autosquash formatted message to fixup specified commit
-                      --squash &lt;commit&gt;     use autosquash formatted message to squash specified commit
-                      --reset-author        the commit is authored by me now (used with -C/-c/--amend)
-                      -s, --signoff         add a Signed-off-by trailer
-                      -t, --template &lt;file&gt;
-                                            use specified template file
-                      -e, --edit            force edit of commit
-                      --cleanup &lt;mode&gt;      how to strip spaces and #comments from message
-                      --status              include status in commit message template
-                      -S, --gpg-sign[=&lt;key-id&gt;]
-                                            GPG sign commit
+Commit message options
+    -F, --file      read message from file
+    --author      override author for commit
+    --date          override date for commit
+    -m, --message 
+                          commit message
+    -c, --reedit-message 
+                          reuse and edit message from specified commit
+    -C, --reuse-message 
+                          reuse message from specified commit
+    --fixup       use autosquash formatted message to fixup specified commit
+    --squash      use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template 
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup       how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=]
+                          GPG sign commit
 
-                  Commit contents options
-                      -a, --all             commit all changed files
-                      -i, --include         add specified files to index for commit
-                      --interactive         interactively add files
-                      -p, --patch           interactively add changes
-                      -o, --only            commit only specified files
-                      -n, --no-verify       bypass pre-commit and commit-msg hooks
-                      --dry-run             show what would be committed
-                      --short               show status concisely
-                      --branch              show branch information
-                      --ahead-behind        compute full ahead/behind values
-                      --porcelain           machine-readable output
-                      --long                show status in long format (default)
-                      -z, --null            terminate entries with NUL
-                      --amend               amend previous commit
-                      --no-post-rewrite     bypass post-rewrite hook
-                      -u, --untracked-files[=&lt;mode&gt;]
-                                            show untracked files, optional modes: all, normal, no. (Default: all)
-                      --pathspec-from-file &lt;file&gt;
-                                            read pathspec from file
-                      --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file 
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+                 </pre>
                  </code>
-              </pre>
+              </div>
             </div>
           </div>
 
@@ -636,176 +662,177 @@
             <div class="shell">
               <code class="shell_user">[user@localhost]$</code>
 
-              <pre class="language_shell">
-                <code class="console_shell white_space">
-                  <span class="text_green">git</span> help --all
-                    See 'git help ' to read about a specific subcommand
+              <div class="language_shell">
+                <code class="console_shell">
+                  <span class="text_green">git</span> help --all <br>
+                  See 'git help ' to read about a specific subcommand <br>
+                  <pre>
+Main Porcelain Commands
+   add                  Add file contents to the index
+   am                   Apply a series of patches from a mailbox
+   archive              Create an archive of files from a named tree
+   bisect               Use binary search to find the commit that introduced a bug
+   branch               List, create, or delete branches
+   bundle               Move objects and refs by archive
+   checkout             Switch branches or restore working tree files
+   cherry-pick          Apply the changes introduced by some existing commits
+   citool               Graphical alternative to git-commit
+   clean                Remove untracked files from the working tree
+   clone                Clone a repository into a new directory
+   commit               Record changes to the repository
+   describe             Give an object a human readable name based on an available ref
+   diff                 Show changes between commits, commit and working tree, etc
+   fetch                Download objects and refs from another repository
+   format-patch         Prepare patches for e-mail submission
+   gc                   Cleanup unnecessary files and optimize the local repository
+   gitk                 The Git repository browser
+   grep                 Print lines matching a pattern
+   gui                  A portable graphical interface to Git
+   init                 Create an empty Git repository or reinitialize an existing one
+   log                  Show commit logs
+   maintenance          Run tasks to optimize Git repository data
+   merge                Join two or more development histories together
+   mv                   Move or rename a file, a directory, or a symlink
+   notes                Add or inspect object notes
+   pull                 Fetch from and integrate with another repository or a local branch
+   push                 Update remote refs along with associated objects
+   range-diff           Compare two commit ranges (e.g. two versions of a branch)
+   rebase               Reapply commits on top of another base tip
+   reset                Reset current HEAD to the specified state
+   restore              Restore working tree files
+   revert               Revert some existing commits
+   rm                   Remove files from the working tree and from the index
+   shortlog             Summarize 'git log' output
+   show                 Show various types of objects
+   sparse-checkout      Initialize and modify the sparse-checkout
+   stash                Stash the changes in a dirty working directory away
+   status               Show the working tree status
+   submodule            Initialize, update or inspect submodules
+   switch               Switch branches
+   tag                  Create, list, delete or verify a tag object signed with GPG
+   worktree             Manage multiple working trees
 
-                      Main Porcelain Commands
-                        add                  Add file contents to the index
-                        am                   Apply a series of patches from a mailbox
-                        archive              Create an archive of files from a named tree
-                        bisect               Use binary search to find the commit that introduced a bug
-                        branch               List, create, or delete branches
-                        bundle               Move objects and refs by archive
-                        checkout             Switch branches or restore working tree files
-                        cherry-pick          Apply the changes introduced by some existing commits
-                        citool               Graphical alternative to git-commit
-                        clean                Remove untracked files from the working tree
-                        clone                Clone a repository into a new directory
-                        commit               Record changes to the repository
-                        describe             Give an object a human readable name based on an available ref
-                        diff                 Show changes between commits, commit and working tree, etc
-                        fetch                Download objects and refs from another repository
-                        format-patch         Prepare patches for e-mail submission
-                        gc                   Cleanup unnecessary files and optimize the local repository
-                        gitk                 The Git repository browser
-                        grep                 Print lines matching a pattern
-                        gui                  A portable graphical interface to Git
-                        init                 Create an empty Git repository or reinitialize an existing one
-                        log                  Show commit logs
-                        maintenance          Run tasks to optimize Git repository data
-                        merge                Join two or more development histories together
-                        mv                   Move or rename a file, a directory, or a symlink
-                        notes                Add or inspect object notes
-                        pull                 Fetch from and integrate with another repository or a local branch
-                        push                 Update remote refs along with associated objects
-                        range-diff           Compare two commit ranges (e.g. two versions of a branch)
-                        rebase               Reapply commits on top of another base tip
-                        reset                Reset current HEAD to the specified state
-                        restore              Restore working tree files
-                        revert               Revert some existing commits
-                        rm                   Remove files from the working tree and from the index
-                        shortlog             Summarize 'git log' output
-                        show                 Show various types of objects
-                        sparse-checkout      Initialize and modify the sparse-checkout
-                        stash                Stash the changes in a dirty working directory away
-                        status               Show the working tree status
-                        submodule            Initialize, update or inspect submodules
-                        switch               Switch branches
-                        tag                  Create, list, delete or verify a tag object signed with GPG
-                        worktree             Manage multiple working trees
+Ancillary Commands / Manipulators
+   config               Get and set repository or global options
+   fast-export          Git data exporter
+   fast-import          Backend for fast Git data importers
+   filter-branch        Rewrite branches
+   mergetool            Run merge conflict resolution tools to resolve merge conflicts
+   pack-refs            Pack heads and tags for efficient repository access
+   prune                Prune all unreachable objects from the object database
+   reflog               Manage reflog information
+   remote               Manage set of tracked repositories
+   repack               Pack unpacked objects in a repository
+   replace              Create, list, delete refs to replace objects
 
-                      Ancillary Commands / Manipulators
-                        config               Get and set repository or global options
-                        fast-export          Git data exporter
-                        fast-import          Backend for fast Git data importers
-                        filter-branch        Rewrite branches
-                        mergetool            Run merge conflict resolution tools to resolve merge conflicts
-                        pack-refs            Pack heads and tags for efficient repository access
-                        prune                Prune all unreachable objects from the object database
-                        reflog               Manage reflog information
-                        remote               Manage set of tracked repositories
-                        repack               Pack unpacked objects in a repository
-                        replace              Create, list, delete refs to replace objects
+Ancillary Commands / Interrogators
+   annotate             Annotate file lines with commit information
+   blame                Show what revision and author last modified each line of a file
+   bugreport            Collect information for user to file a bug report
+   count-objects        Count unpacked number of objects and their disk consumption
+   difftool             Show changes using common diff tools
+   fsck                 Verifies the connectivity and validity of the objects in the database
+   gitweb               Git web interface (web frontend to Git repositories)
+   help                 Display help information about Git
+   instaweb             Instantly browse your working repository in gitweb
+   merge-tree           Show three-way merge without touching index
+   rerere               Reuse recorded resolution of conflicted merges
+   show-branch          Show branches and their commits
+   verify-commit        Check the GPG signature of commits
+   verify-tag           Check the GPG signature of tags
+   whatchanged          Show logs with difference each commit introduces
 
-                      Ancillary Commands / Interrogators
-                        annotate             Annotate file lines with commit information
-                        blame                Show what revision and author last modified each line of a file
-                        bugreport            Collect information for user to file a bug report
-                        count-objects        Count unpacked number of objects and their disk consumption
-                        difftool             Show changes using common diff tools
-                        fsck                 Verifies the connectivity and validity of the objects in the database
-                        gitweb               Git web interface (web frontend to Git repositories)
-                        help                 Display help information about Git
-                        instaweb             Instantly browse your working repository in gitweb
-                        merge-tree           Show three-way merge without touching index
-                        rerere               Reuse recorded resolution of conflicted merges
-                        show-branch          Show branches and their commits
-                        verify-commit        Check the GPG signature of commits
-                        verify-tag           Check the GPG signature of tags
-                        whatchanged          Show logs with difference each commit introduces
+Interacting with Others
+   archimport           Import a GNU Arch repository into Git
+   cvsexportcommit      Export a single commit to a CVS checkout
+   cvsimport            Salvage your data out of another SCM people love to hate
+   cvsserver            A CVS server emulator for Git
+   imap-send            Send a collection of patches from stdin to an IMAP folder
+   p4                   Import from and submit to Perforce repositories
+   quiltimport          Applies a quilt patchset onto the current branch
+   request-pull         Generates a summary of pending changes
+   send-email           Send a collection of patches as emails
+   svn                  Bidirectional operation between a Subversion repository and Git
 
-                      Interacting with Others
-                        archimport           Import a GNU Arch repository into Git
-                        cvsexportcommit      Export a single commit to a CVS checkout
-                        cvsimport            Salvage your data out of another SCM people love to hate
-                        cvsserver            A CVS server emulator for Git
-                        imap-send            Send a collection of patches from stdin to an IMAP folder
-                        p4                   Import from and submit to Perforce repositories
-                        quiltimport          Applies a quilt patchset onto the current branch
-                        request-pull         Generates a summary of pending changes
-                        send-email           Send a collection of patches as emails
-                        svn                  Bidirectional operation between a Subversion repository and Git
+Low-level Commands / Manipulators
+   apply                Apply a patch to files and/or to the index
+   checkout-index       Copy files from the index to the working tree
+   commit-graph         Write and verify Git commit-graph files
+   commit-tree          Create a new commit object
+   hash-object          Compute object ID and optionally creates a blob from a file
+   index-pack           Build pack index file for an existing packed archive
+   merge-file           Run a three-way file merge
+   merge-index          Run a merge for files needing merging
+   mktag                Creates a tag object
+   mktree               Build a tree-object from ls-tree formatted text
+   multi-pack-index     Write and verify multi-pack-indexes
+   pack-objects         Create a packed archive of objects
+   prune-packed         Remove extra objects that are already in pack files
+   read-tree            Reads tree information into the index
+   symbolic-ref         Read, modify and delete symbolic refs
+   unpack-objects       Unpack objects from a packed archive
+   update-index         Register file contents in the working tree to the index
+   update-ref           Update the object name stored in a ref safely
+   write-tree           Create a tree object from the current index
 
-                      Low-level Commands / Manipulators
-                        apply                Apply a patch to files and/or to the index
-                        checkout-index       Copy files from the index to the working tree
-                        commit-graph         Write and verify Git commit-graph files
-                        commit-tree          Create a new commit object
-                        hash-object          Compute object ID and optionally creates a blob from a file
-                        index-pack           Build pack index file for an existing packed archive
-                        merge-file           Run a three-way file merge
-                        merge-index          Run a merge for files needing merging
-                        mktag                Creates a tag object
-                        mktree               Build a tree-object from ls-tree formatted text
-                        multi-pack-index     Write and verify multi-pack-indexes
-                        pack-objects         Create a packed archive of objects
-                        prune-packed         Remove extra objects that are already in pack files
-                        read-tree            Reads tree information into the index
-                        symbolic-ref         Read, modify and delete symbolic refs
-                        unpack-objects       Unpack objects from a packed archive
-                        update-index         Register file contents in the working tree to the index
-                        update-ref           Update the object name stored in a ref safely
-                        write-tree           Create a tree object from the current index
+Low-level Commands / Interrogators
+   cat-file             Provide content or type and size information for repository objects
+   cherry               Find commits yet to be applied to upstream
+   diff-files           Compares files in the working tree and the index
+   diff-index           Compare a tree to the working tree or index
+   diff-tree            Compares the content and mode of blobs found via two tree objects
+   for-each-ref         Output information on each ref
+   for-each-repo        Run a Git command on a list of repositories
+   get-tar-commit-id    Extract commit ID from an archive created using git-archive
+   ls-files             Show information about files in the index and the working tree
+   ls-remote            List references in a remote repository
+   ls-tree              List the contents of a tree object
+   merge-base           Find as good common ancestors as possible for a merge
+   name-rev             Find symbolic names for given revs
+   pack-redundant       Find redundant pack files
+   rev-list             Lists commit objects in reverse chronological order
+   rev-parse            Pick out and massage parameters
+   show-index           Show packed archive index
+   show-ref             List references in a local repository
+   unpack-file          Creates a temporary file with a blob's contents
+   var                  Show a Git logical variable
+   verify-pack          Validate packed Git archive files
 
-                      Low-level Commands / Interrogators
-                        cat-file             Provide content or type and size information for repository objects
-                        cherry               Find commits yet to be applied to upstream
-                        diff-files           Compares files in the working tree and the index
-                        diff-index           Compare a tree to the working tree or index
-                        diff-tree            Compares the content and mode of blobs found via two tree objects
-                        for-each-ref         Output information on each ref
-                        for-each-repo        Run a Git command on a list of repositories
-                        get-tar-commit-id    Extract commit ID from an archive created using git-archive
-                        ls-files             Show information about files in the index and the working tree
-                        ls-remote            List references in a remote repository
-                        ls-tree              List the contents of a tree object
-                        merge-base           Find as good common ancestors as possible for a merge
-                        name-rev             Find symbolic names for given revs
-                        pack-redundant       Find redundant pack files
-                        rev-list             Lists commit objects in reverse chronological order
-                        rev-parse            Pick out and massage parameters
-                        show-index           Show packed archive index
-                        show-ref             List references in a local repository
-                        unpack-file          Creates a temporary file with a blob's contents
-                        var                  Show a Git logical variable
-                        verify-pack          Validate packed Git archive files
+Low-level Commands / Syncing Repositories
+   daemon               A really simple server for Git repositories
+   fetch-pack           Receive missing objects from another repository
+   http-backend         Server side implementation of Git over HTTP
+   send-pack            Push objects over Git protocol to another repository
+   update-server-info   Update auxiliary info file to help dumb servers
 
-                      Low-level Commands / Syncing Repositories
-                        daemon               A really simple server for Git repositories
-                        fetch-pack           Receive missing objects from another repository
-                        http-backend         Server side implementation of Git over HTTP
-                        send-pack            Push objects over Git protocol to another repository
-                        update-server-info   Update auxiliary info file to help dumb servers
+Low-level Commands / Internal Helpers
+   check-attr           Display gitattributes information
+   check-ignore         Debug gitignore / exclude files
+   check-mailmap        Show canonical names and email addresses of contacts
+   check-ref-format     Ensures that a reference name is well formed
+   column               Display data in columns
+   credential           Retrieve and store user credentials
+   credential-cache     Helper to temporarily store passwords in memory
+   credential-store     Helper to store credentials on disk
+   fmt-merge-msg        Produce a merge commit message
+   interpret-trailers   Add or parse structured information in commit messages
+   mailinfo             Extracts patch and authorship from a single e-mail message
+   mailsplit            Simple UNIX mbox splitter program
+   merge-one-file       The standard helper program to use with git-merge-index
+   patch-id             Compute unique ID for a patch
+   sh-i18n              Git's i18n setup code for shell scripts
+   sh-setup             Common Git shell script setup code
+   stripspace           Remove unnecessary whitespace
 
-                      Low-level Commands / Internal Helpers
-                        check-attr           Display gitattributes information
-                        check-ignore         Debug gitignore / exclude files
-                        check-mailmap        Show canonical names and email addresses of contacts
-                        check-ref-format     Ensures that a reference name is well formed
-                        column               Display data in columns
-                        credential           Retrieve and store user credentials
-                        credential-cache     Helper to temporarily store passwords in memory
-                        credential-store     Helper to store credentials on disk
-                        fmt-merge-msg        Produce a merge commit message
-                        interpret-trailers   Add or parse structured information in commit messages
-                        mailinfo             Extracts patch and authorship from a single e-mail message
-                        mailsplit            Simple UNIX mbox splitter program
-                        merge-one-file       The standard helper program to use with git-merge-index
-                        patch-id             Compute unique ID for a patch
-                        sh-i18n              Git's i18n setup code for shell scripts
-                        sh-setup             Common Git shell script setup code
-                        stripspace           Remove unnecessary whitespace
-
-                      External commands
-                        askyesno
-                        credential-helper-selector
-                        flow
-                        lfs
-                                          
+External commands
+   askyesno
+   credential-helper-selector
+   flow
+   lfs
+                  </pre>
+                   
                 </code>
-              </pre>
+              </div>
             </div>
           </div>
 
@@ -840,35 +867,39 @@
 
           <ul>
             <li>
-              Make copies of all the relevant files to avoid impacting the live
-              version
+              <span>Make copies of all the relevant files to avoid impacting the live
+              version</span>
             </li>
             <li>
-              Start working with the design and find that code depend on code in
-              other files, that also need to be changed!
+              <span>Start working with the design and find that code depend on code in
+              other files, that also need to be changed!</span>
             </li>
             <li>
-              Make copies of the dependant files as well. Making sure that every
-              file dependency references the correct file name
+              <span>Make copies of the dependant files as well. Making sure that every
+              file dependency references the correct file name</span>
             </li>
             <li>
-              EMERGENCY! There is an unrelated error somewhere else in the
-              project that needs to be fixed ASAP!
+              <span>EMERGENCY! There is an unrelated error somewhere else in the
+              project that needs to be fixed ASAP!</span>
             </li>
             <li>
-              Save all your files, making a note of the names of the copies you
-              were working on
-            </li>
-            <li>Work on the unrelated error and update the code to fix it</li>
-            <li>Go back to the design, and finish the work there</li>
-            <li>
-              Copy the code or rename the files, so the updated design is on the
-              live version
+              <span>Save all your files, making a note of the names of the copies you
+              were working on</span>
             </li>
             <li>
-              (2 weeks later, you realize that the unrelated error was not fixed
+              <span>Work on the unrelated error and update the code to fix it</span>
+            </li>
+            <li>
+              <span>Go back to the design, and finish the work there</span>
+            </li>
+            <li>
+              <span>Copy the code or rename the files, so the updated design is on the
+              live version</span>
+            </li>
+            <li>
+              <span>(2 weeks later, you realize that the unrelated error was not fixed
               in the new design version because you copied the files before the
-              fix)
+              fix)</span>
             </li>
           </ul>
 
@@ -876,26 +907,26 @@
 
           <ul>
             <li>
-              With a new branch called new-design, edit the code directly
-              without impacting the main branch
+              <span>With a new branch called new-design, edit the code directly
+              without impacting the main branch</span>
             </li>
             <li>
-              EMERGENCY! There is an unrelated error somewhere else in the
-              project that needs to be fixed ASAP!
+             <span> EMERGENCY! There is an unrelated error somewhere else in the
+              project that needs to be fixed ASAP!</span>
             </li>
             <li>
-              Create a new branch from the main project called small-error-fix
+              <span>Create a new branch from the main project called small-error-fix</span>
             </li>
             <li>
-              Fix the unrelated error and merge the small-error-fix branch with
-              the main branch
+              <span> Fix the unrelated error and merge the small-error-fix branch with
+              the main branch</span>
             </li>
             <li>
-              You go back to the new-design branch, and finish the work there
+              <span>You go back to the new-design branch, and finish the work there</span>
             </li>
             <li>
-              Merge the new-design branch with main (getting alerted to the
-              small error fix that you were missing)
+              <span>Merge the new-design branch with main (getting alerted to the
+              small error fix that you were missing)</span>
             </li>
           </ul>
 
@@ -1130,12 +1161,14 @@
         <article>
           <ul>
             <li>
-              All the documentation in this page is taken from
+              <span>
+                All the documentation in this page is taken from
               <a
                 href="https://www.w3schools.com/git/default.asp?remote=github"
                 target="_blank"
-                >W3schools</a
-              >
+                >W3schools
+              </a>
+              </span>
             </li>
           </ul>
         </article>

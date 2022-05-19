@@ -2,18 +2,6 @@
   box-sizing: border-box;
 }
 
-/* #f35333
-     #e4dad3 
-     #423204 
-     #756c52 
-     #a4a294 
-     #f47c6a
-     #f49080 
-     #ec3c0e 
-  
-  
-  */
-
 :root {
   --main-bg-color: #e4dad3;
   --main-font-color: #fff;
@@ -170,13 +158,11 @@ section li span {
   color: black;
   text-align: left;
   overflow-x: auto;
-  text-align: left;
   padding: 0 8px 8px 8px;
 }
 
 .console_shell {
   position: relative;
-
   width: 100%;
   word-break: normal;
   word-wrap: normal;
@@ -187,7 +173,6 @@ section li span {
 @media only screen and (max-width: 815px) {
   #navbar ul {
     border: 1px solid;
-
     max-height: 180px;
   }
   #navbar ul li:first-child {
